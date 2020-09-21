@@ -13,6 +13,7 @@
 		EB5A06C925176C2B002627E9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB5A06C825176C2B002627E9 /* Preview Assets.xcassets */; };
 		EB5A06D425176C2C002627E9 /* TeslaNewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5A06D325176C2C002627E9 /* TeslaNewTests.swift */; };
 		EB5A06DF25176C2C002627E9 /* TeslaNewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5A06DE25176C2C002627E9 /* TeslaNewUITests.swift */; };
+		EB999E512517E5DD008C1DEC /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB999E502517E5DD008C1DEC /* CustomTabBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		EB5A06DA25176C2C002627E9 /* TeslaNewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeslaNewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB5A06DE25176C2C002627E9 /* TeslaNewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeslaNewUITests.swift; sourceTree = "<group>"; };
 		EB5A06E025176C2C002627E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB999E502517E5DD008C1DEC /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				EB5A06C525176C2B002627E9 /* Assets.xcassets */,
 				EB5A06CA25176C2B002627E9 /* Info.plist */,
 				EB5A06C725176C2B002627E9 /* Preview Content */,
+				EB999E502517E5DD008C1DEC /* CustomTabBar.swift */,
 			);
 			path = TeslaNew;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB5A06C425176C26002627E9 /* ContentView.swift in Sources */,
+				EB999E512517E5DD008C1DEC /* CustomTabBar.swift in Sources */,
 				EB5A06C225176C26002627E9 /* TeslaNewApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
