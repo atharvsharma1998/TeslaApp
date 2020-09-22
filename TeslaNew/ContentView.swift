@@ -15,6 +15,9 @@ struct ContentView: View {
    // @State var carMove = false
     @State var showCard = false
     @State var cardIndex = -1
+    @State var chargePercent = CGFloat(100)
+    @State var dragState = CGSize.zero
+    @State var rectPosition = CGPoint(x: 50, y: 50)
     
     var body: some View {
         
@@ -178,6 +181,7 @@ struct ContentView: View {
                     .rotationEffect(Angle(degrees: showCard ? getRotateCar(cardIndex: self.cardIndex) : 0))
                   
                     .scaleEffect(showCard ? 0.83 :1.1711)
+                    .opacity(showCard ? 1 : 0)
                     //.position(x: 124, y: 530)
                 //.scaleEffect(showCard ? getScaleCar(cardIndex: cardIndex) : 1)
                     .position(x: showCard ? getXPositionCar(cardIndex: cardIndex, geometry: geometry) : geometry.size.width - geometry.size.width * 0.68 , y: showCard ? getYPositionCar(cardIndex: cardIndex, geometry: geometry) : geometry.size.height - geometry.size.height*0.41)
@@ -185,32 +189,70 @@ struct ContentView: View {
                 
                 
                 
+                 
                     Image("TeslaCar")
-                        
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        
-                        .frame(width: geometry.size.width * 0.6, height:geometry.size.width * 0.6 * 2.094)
-//                        .rotationEffect(Angle(degrees: showCard ? getRotateCar(cardIndex: self.cardIndex) : 0))
-//                        .scaleEffect(showCard ? getScaleCar(cardIndex: cardIndex) : 1)
-                       
-                        .clipShape(
-                            Rectangle()
+                            
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            
+                            .frame(width: geometry.size.width * 0.6, height:geometry.size.width * 0.6 * 2.094)
+    //                        .rotationEffect(Angle(degrees: showCard ? getRotateCar(cardIndex: self.cardIndex) : 0))
+    //                        .scaleEffect(showCard ? getScaleCar(cardIndex: cardIndex) : 1)
+                           
+                            .clipShape(
                                 
-                                .offset(y: showCard ? 300 : 0)) //520
-                        
-                        .rotationEffect(Angle(degrees: showCard ? getRotateCar(cardIndex: self.cardIndex) : 0))
-                        .scaleEffect(showCard ? getScaleCar(cardIndex: cardIndex) : 1)
-                        .position(x: showCard ? getXPositionCar(cardIndex: cardIndex, geometry: geometry) : geometry.size.width - geometry.size.width * 0.68 , y: showCard ? getYPositionCar(cardIndex: cardIndex, geometry: geometry) : geometry.size.height - geometry.size.height*0.41)
+                                
+                                Rectangle()
+                                    
+                                    .offset(y: showCard ? (100 - chargePercent) * 5.2 : 0) //520 to disappear || (1% = 5.2)
+                            
+                            )
+                                   
+                            
+                      
+                            
+                            .rotationEffect(Angle(degrees: showCard ? getRotateCar(cardIndex: self.cardIndex) : 0))
+                            .scaleEffect(showCard ? getScaleCar(cardIndex: cardIndex) : 1)
+                            .position(x: showCard ? getXPositionCar(cardIndex: cardIndex, geometry: geometry) : geometry.size.width - geometry.size.width * 0.68 , y: showCard ? getYPositionCar(cardIndex: cardIndex, geometry: geometry) : geometry.size.height - geometry.size.height*0.41)
                         .animation(.easeInOut)
+                    
+                    
+                
+                
+                if showCard {
+                    GeometryReader { geo in
+                        Rectangle()
+                            .foregroundColor(Color("ColorButtonLogo"))
+                            .frame(width: geometry.size.width * 0.6, height: 7)//1.5
+                            //.offset(y: showCard ?  0  : (geometry.size.width * 0.6 * 2.094)) //259 for 0 || (1% = 5.2)
+                            .offset(y: dragState.height)
+                            .gesture(
+                            
+                                DragGesture()
+                                    .onChanged{ (value) in
+                                        
+                                        self.dragState = value.translation
+                                        
+                                       // self.position.width = min(self.position.width + value.location.x, geometry.size.width / 2)
+                                        
+                                        //self.rectPosition = CGPoint(x: value.location.x, y: 50)
+                                        
+                                    }
+                                    .onEnded({ (value) in
+                                        self.dragState = value.translation
+                                    })
+                            )
+                                
+                    }
+                    .frame(width: geometry.size.width * 0.6, height: geometry.size.width * 0.6 * 2.094)
+                    .rotationEffect(Angle(degrees: showCard ? getRotateCar(cardIndex: self.cardIndex) : 0))
+                    .scaleEffect(showCard ? getScaleCar(cardIndex: cardIndex) : 1)
+                    .position(x: showCard ? getXPositionCar(cardIndex: cardIndex, geometry: geometry) : geometry.size.width - geometry.size.width * 0.68 , y: showCard ? getYPositionCar(cardIndex: cardIndex, geometry: geometry) : geometry.size.height - geometry.size.height*0.41)
+                    .opacity(1)
+                    .animation(.easeInOut)
+                }
+                    
             }
-            
-            
-            
-            
-            
-            
-            
             
         }
         .frame(width: screen.width, height: screen.height)
@@ -218,7 +260,9 @@ struct ContentView: View {
         
         
         
+        
     }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {

@@ -60,6 +60,7 @@ struct ChargeCardView: View {
         }
         .background(Color.white)
         .frame(width: screen.width, height: screen.height)
+        //.opacity(0.8)
         //.edgesIgnoringSafeArea(.all)
         
         
