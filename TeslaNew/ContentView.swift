@@ -190,14 +190,17 @@ struct ContentView: View {
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         
-                        .frame(width: geometry.size.width * 0.6, height:geometry.size.width * 0.6*2.094)
-                        .rotationEffect(Angle(degrees: showCard ? getRotateCar(cardIndex: self.cardIndex) : 0))
-                        .scaleEffect(showCard ? getScaleCar(cardIndex: cardIndex) : 1)
+                        .frame(width: geometry.size.width * 0.6, height:geometry.size.width * 0.6 * 2.094)
+//                        .rotationEffect(Angle(degrees: showCard ? getRotateCar(cardIndex: self.cardIndex) : 0))
+//                        .scaleEffect(showCard ? getScaleCar(cardIndex: cardIndex) : 1)
                        
                         .clipShape(
                             Rectangle()
                                 
                                 .offset(y: showCard ? 300 : 0)) //520
+                        
+                        .rotationEffect(Angle(degrees: showCard ? getRotateCar(cardIndex: self.cardIndex) : 0))
+                        .scaleEffect(showCard ? getScaleCar(cardIndex: cardIndex) : 1)
                         .position(x: showCard ? getXPositionCar(cardIndex: cardIndex, geometry: geometry) : geometry.size.width - geometry.size.width * 0.68 , y: showCard ? getYPositionCar(cardIndex: cardIndex, geometry: geometry) : geometry.size.height - geometry.size.height*0.41)
                         .animation(.easeInOut)
             }
