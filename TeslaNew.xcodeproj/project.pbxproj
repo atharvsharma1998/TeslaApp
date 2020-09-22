@@ -14,6 +14,8 @@
 		EB5A06D425176C2C002627E9 /* TeslaNewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5A06D325176C2C002627E9 /* TeslaNewTests.swift */; };
 		EB5A06DF25176C2C002627E9 /* TeslaNewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5A06DE25176C2C002627E9 /* TeslaNewUITests.swift */; };
 		EB999E512517E5DD008C1DEC /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB999E502517E5DD008C1DEC /* CustomTabBar.swift */; };
+		EBC70460251954E900A3E099 /* ChargeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC7045F251954E900A3E099 /* ChargeCardView.swift */; };
+		EBE482152518ACDD0081EECA /* CarInfoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE482142518ACDD0081EECA /* CarInfoCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		EB5A06DE25176C2C002627E9 /* TeslaNewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeslaNewUITests.swift; sourceTree = "<group>"; };
 		EB5A06E025176C2C002627E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB999E502517E5DD008C1DEC /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
+		EBC7045F251954E900A3E099 /* ChargeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeCardView.swift; sourceTree = "<group>"; };
+		EBE482142518ACDD0081EECA /* CarInfoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarInfoCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				EB5A06CA25176C2B002627E9 /* Info.plist */,
 				EB5A06C725176C2B002627E9 /* Preview Content */,
 				EB999E502517E5DD008C1DEC /* CustomTabBar.swift */,
+				EBE482142518ACDD0081EECA /* CarInfoCard.swift */,
+				EBC7045F251954E900A3E099 /* ChargeCardView.swift */,
 			);
 			path = TeslaNew;
 			sourceTree = "<group>";
@@ -262,9 +268,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBE482152518ACDD0081EECA /* CarInfoCard.swift in Sources */,
 				EB5A06C425176C26002627E9 /* ContentView.swift in Sources */,
 				EB999E512517E5DD008C1DEC /* CustomTabBar.swift in Sources */,
 				EB5A06C225176C26002627E9 /* TeslaNewApp.swift in Sources */,
+				EBC70460251954E900A3E099 /* ChargeCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,6 +12,7 @@ struct TeslaNewApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+            //CarInfoCard()
         }
     }
 }
