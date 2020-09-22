@@ -170,24 +170,36 @@ struct ContentView: View {
             
             ZStack{
                 
-                Image("TeslaCar")
-                    
+                Image("TeslaCarOutlineNew")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    
                     .frame(width: geometry.size.width * 0.6, height:geometry.size.width * 0.6*2.094)
+                    
                     .rotationEffect(Angle(degrees: showCard ? getRotateCar(cardIndex: self.cardIndex) : 0))
-                    .scaleEffect(showCard ? getScaleCar(cardIndex: cardIndex) : 1)
-                   
-                    
+                  
+                    .scaleEffect(showCard ? 0.83 :1.1711)
+                    //.position(x: 124, y: 530)
+                //.scaleEffect(showCard ? getScaleCar(cardIndex: cardIndex) : 1)
                     .position(x: showCard ? getXPositionCar(cardIndex: cardIndex, geometry: geometry) : geometry.size.width - geometry.size.width * 0.68 , y: showCard ? getYPositionCar(cardIndex: cardIndex, geometry: geometry) : geometry.size.height - geometry.size.height*0.41)
+                    .animation(.easeInOut)
+                
+                
+                
+                    Image("TeslaCar")
+                        
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        
+                        .frame(width: geometry.size.width * 0.6, height:geometry.size.width * 0.6*2.094)
+                        .rotationEffect(Angle(degrees: showCard ? getRotateCar(cardIndex: self.cardIndex) : 0))
+                        .scaleEffect(showCard ? getScaleCar(cardIndex: cardIndex) : 1)
+                       
+                        .clipShape(
+                            Rectangle()
                                 
-                                
-                                
-                    
-                    .animation(.easeIn)
-                    
-                    
+                                .offset(y: showCard ? 300 : 0)) //520
+                        .position(x: showCard ? getXPositionCar(cardIndex: cardIndex, geometry: geometry) : geometry.size.width - geometry.size.width * 0.68 , y: showCard ? getYPositionCar(cardIndex: cardIndex, geometry: geometry) : geometry.size.height - geometry.size.height*0.41)
+                        .animation(.easeInOut)
             }
             
             

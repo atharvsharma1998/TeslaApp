@@ -20,7 +20,6 @@ struct ChargeCardView: View {
                         
                         Text("Charge")
                             .font(.title)
-                          
                     }
                     
                     HStack(spacing: 0){
@@ -41,7 +40,7 @@ struct ChargeCardView: View {
                 
                 Spacer()
                     .frame(width: screen.width, height: 230)
-                    .background(Color.black)
+                    //.background(Color.black)
                 
                 Spacer()
                 
@@ -59,6 +58,7 @@ struct ChargeCardView: View {
             
             
         }
+        .background(Color.white)
         .frame(width: screen.width, height: screen.height)
         //.edgesIgnoringSafeArea(.all)
         
