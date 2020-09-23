@@ -1,10 +1,10 @@
 # TeslaApp
 This is a concept for tesla ios app. It is made by using SwiftUI.
 
-# Video TeslaApp
+# Video
 <img src="TeslaNew/GithubAssets/AppGif.gif" width="300">
 
-# ScreenShots TeslaApp
+# ScreenShots
 <img src="TeslaNew/GithubAssets/HomePage.png" width="300">
 <img src="TeslaNew/GithubAssets/ChargingPage.png" width="300">
 
