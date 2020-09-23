@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ChargeCardView: View {
     @Binding var show: Bool
+    @State var charging = false
     
     var body: some View {
         
@@ -30,7 +31,7 @@ struct ChargeCardView: View {
                             })
                         
                         Spacer()
-
+                        
                     }
                     .padding()
                     
@@ -42,17 +43,90 @@ struct ChargeCardView: View {
                     .frame(width: screen.width, height: 230)
                     //.background(Color.black)
                 
-                Spacer()
+                VStack{
+                    
+                    
+                    HStack(spacing: 100){
+                        HStack(spacing: 4){
+                            Text("0 km/hr")
+                        }
+                        
+                        HStack(spacing: 4){
+                            Text("206")
+                            Text("V")
+                        }
+                        
+                        HStack(spacing: 4){
+                            Text("33")
+                            Text("A")
+                        }
+                    }
+//                    .frame(width: screen.width, height: 30)
+                    .opacity(charging ? 1 : 0)
+                    
+                    Spacer()
+                        .frame(width: screen.width, height: 20)
+                    
+                    Button(action: {charging.toggle()}) {
+                        if charging{
+                            Text("Stop Charging")
+                            
+                            
+                        }
+                        else{
+                            Text("Open Charging Port")
+                        }
+                    }
+                    .padding()
+                    .frame(width: 300, height: 50)
+                    .foregroundColor(Color.black)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 5)
+                            .stroke(Color.black, lineWidth: 1)
+                    )
+                    
+                    
+                    
+                }
+                .padding(.bottom)
+                
+                
+                Divider().padding(.horizontal)
                 
                 
                 
+                ScrollView {
+                    HStack{
+                        
+                        Text("Nearby Chargers")
+                            .font(.title3)
+                            .bold()
+                        Spacer()
+                        
+                        
+                        
+                    }
+                    .padding(.leading ,30)
+                    .frame(width: screen.width, height: 70)
+                    
+                    
+                    VStack(spacing: 15){
+                        
+                        ChargerListView()
+                        ChargerListView()
+                        ChargerListView()
+                        ChargerListView()
+                        ChargerListView()
+                        
+                    }
+                    .padding()
+                    
+                }
+                
+
                 
                 
                 
-              
-                
-                
-               
             }
             .frame(width: screen.width, height: screen.height)
             
@@ -70,5 +144,30 @@ struct ChargeCardView: View {
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
         ChargeCardView(show: .constant(false))
+    }
+}
+
+struct ChargerListView: View {
+    var body: some View {
+        HStack{
+            
+            VStack(alignment: .leading, spacing: 5){
+                Text("Polaris, OH")
+                    .font(.title2)
+                Text("8 / 10 available")
+            }
+            
+            Spacer()
+            
+            Image(systemName: "bolt.circle.fill")
+                .font(.largeTitle)
+                .foregroundColor(Color("ColorMappin"))
+            
+        }
+        .padding(.horizontal,20)
+        .padding(.vertical,20)
+        //.frame(width: 100, height: 100)
+        .background(Color("ColorButton"))
+        .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
     }
 }
