@@ -16,6 +16,7 @@
 		EB7FFBE1251B9E41005B9166 /* AppVideo.mov in Resources */ = {isa = PBXBuildFile; fileRef = EB7FFBE0251B9E41005B9166 /* AppVideo.mov */; };
 		EB7FFBE9251B9E5C005B9166 /* HomePage.png in Resources */ = {isa = PBXBuildFile; fileRef = EB7FFBE8251B9E5B005B9166 /* HomePage.png */; };
 		EB7FFBEE251B9E61005B9166 /* ChargingPage.png in Resources */ = {isa = PBXBuildFile; fileRef = EB7FFBED251B9E61005B9166 /* ChargingPage.png */; };
+		EB7FFBF6251BA407005B9166 /* AppGif.gif in Resources */ = {isa = PBXBuildFile; fileRef = EB7FFBF5251BA407005B9166 /* AppGif.gif */; };
 		EB999E512517E5DD008C1DEC /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB999E502517E5DD008C1DEC /* CustomTabBar.swift */; };
 		EBC70460251954E900A3E099 /* ChargeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC7045F251954E900A3E099 /* ChargeCardView.swift */; };
 		EBE482152518ACDD0081EECA /* CarInfoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE482142518ACDD0081EECA /* CarInfoCard.swift */; };
@@ -54,6 +55,7 @@
 		EB7FFBE0251B9E41005B9166 /* AppVideo.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = AppVideo.mov; sourceTree = "<group>"; };
 		EB7FFBE8251B9E5B005B9166 /* HomePage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomePage.png; sourceTree = "<group>"; };
 		EB7FFBED251B9E61005B9166 /* ChargingPage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ChargingPage.png; sourceTree = "<group>"; };
+		EB7FFBF5251BA407005B9166 /* AppGif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = AppGif.gif; sourceTree = "<group>"; };
 		EB999E502517E5DD008C1DEC /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		EBC7045F251954E900A3E099 /* ChargeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeCardView.swift; sourceTree = "<group>"; };
 		EBE482142518ACDD0081EECA /* CarInfoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarInfoCard.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 		EB7FFBDF251B9DAC005B9166 /* GithubAssets */ = {
 			isa = PBXGroup;
 			children = (
+				EB7FFBF5251BA407005B9166 /* AppGif.gif */,
 				EB7FFBED251B9E61005B9166 /* ChargingPage.png */,
 				EB7FFBE8251B9E5B005B9166 /* HomePage.png */,
 				EB7FFBE0251B9E41005B9166 /* AppVideo.mov */,
@@ -262,6 +265,7 @@
 				EB5A06C925176C2B002627E9 /* Preview Assets.xcassets in Resources */,
 				EB5A06C625176C2B002627E9 /* Assets.xcassets in Resources */,
 				EB7FFBEE251B9E61005B9166 /* ChargingPage.png in Resources */,
+				EB7FFBF6251BA407005B9166 /* AppGif.gif in Resources */,
 				EB7FFBE1251B9E41005B9166 /* AppVideo.mov in Resources */,
 				EB7FFBE9251B9E5C005B9166 /* HomePage.png in Resources */,
 			);
