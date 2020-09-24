@@ -1,5 +1,5 @@
 # TeslaApp
-This is a concept for tesla ios app. It is made by using SwiftUI.
+This is a concept for tesla ios app. It is made by using SwiftUI. Uses static data.
 
 # Video
 <img src="TeslaNew/GithubAssets/AppGif.gif" width="300">
