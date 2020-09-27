@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ChargeCardView: View {
     @Binding var show: Bool
+    
     @State var charging = false
     
     var body: some View {
@@ -39,12 +40,18 @@ struct ChargeCardView: View {
                 
                 .padding(.top, 45)
                 
+                VStack {
+                    Text(charging ? "Charging" : "Parked")
+                        .bold()
+                    Text("2Hrs 14min Remaining")
+                        .opacity(charging ? 1 : 0)
+                }
+                
                 Spacer()
                     .frame(width: screen.width, height: 230)
                     //.background(Color.black)
                 
-                VStack{
-                    
+                VStack(spacing:5){
                     
                     HStack(spacing: 100){
                         HStack(spacing: 4){
@@ -70,20 +77,29 @@ struct ChargeCardView: View {
                     Button(action: {charging.toggle()}) {
                         if charging{
                             Text("Stop Charging")
+                                .padding()
+                                .frame(width: 300, height: 50)
+                                .foregroundColor(Color.black)
                             
                             
                         }
                         else{
                             Text("Open Charging Port")
+                                .padding()
+                                .frame(width: 300, height: 50)
+                                .foregroundColor(Color.black)
                         }
                     }
+                    
                     .padding()
                     .frame(width: 300, height: 50)
                     .foregroundColor(Color.black)
+                    
                     .overlay(
                         RoundedRectangle(cornerRadius: 5)
                             .stroke(Color.black, lineWidth: 1)
                     )
+
                     
                     
                     
@@ -107,7 +123,8 @@ struct ChargeCardView: View {
                         
                     }
                     .padding(.leading ,30)
-                    .frame(width: screen.width, height: 70)
+                    //.padding(.bottom,0)
+                    .frame(width: screen.width, height: 50)
                     
                     
                     VStack(spacing: 15){
@@ -119,14 +136,10 @@ struct ChargeCardView: View {
                         ChargerListView()
                         
                     }
-                    .padding()
+                    .padding(.horizontal)
                     
                 }
-                
 
-                
-                
-                
             }
             .frame(width: screen.width, height: screen.height)
             
@@ -159,9 +172,14 @@ struct ChargerListView: View {
             
             Spacer()
             
-            Image(systemName: "bolt.circle.fill")
-                .font(.largeTitle)
-                .foregroundColor(Color("ColorMappin"))
+            VStack(spacing: 3) {
+                Image(systemName: "bolt.circle.fill")
+                    .font(.largeTitle)
+                    .foregroundColor(Color("ColorMappin"))
+                
+                Text("3.4km")
+                    .font(.subheadline)
+            }
             
         }
         .padding(.horizontal,20)
