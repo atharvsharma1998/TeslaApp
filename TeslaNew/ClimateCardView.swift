@@ -106,6 +106,6 @@ func carTempLimit(carTemp: Int) -> String{
         return "High"
     }
     
-    return "\(carTemp)"
+    return "\(carTemp)ºC"
     
 }

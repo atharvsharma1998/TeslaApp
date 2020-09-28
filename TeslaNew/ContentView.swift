@@ -246,7 +246,7 @@ struct ContentView: View {
                                 
                                 .font(.footnote)
                                 .foregroundColor(Color("ColorError"))
-                                .position(x: 100, y: 100)
+                                .position(x: (geometry.size.width * 0.6)/2, y: (geometry.size.width * 0.6 * 2.094)*0.95)
                                 .onTapGesture(perform: {
                                     carError.toggle()
                                 })
@@ -254,12 +254,12 @@ struct ContentView: View {
  
                             
                         }
-                        .frame(width: geometry.size.width * 0.6, height:geometry.size.width * 0.6 * 2.094)
+                        .frame(width: geometry.size.width * 0.6, height: geometry.size.width * 0.6 * 2.094)
                          
             
                     )
                     
-                    .frame(width: geometry.size.width * 0.6, height:geometry.size.width * 0.6 * 2.094)
+                    .frame(width: geometry.size.width * 0.6, height: geometry.size.width * 0.6 * 2.094)
                     //                        .rotationEffect(Angle(degrees: showCard ? getRotateCar(cardIndex: self.cardIndex) : 0))
                     //                        .scaleEffect(showCard ? getScaleCar(cardIndex: cardIndex) : 1)
                     
